@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: discoveryservice
+
+server:
+  port: 8761
+
+# for list
+list:
+  -one:
+  -two:
+
+# meka use karanne meyawama meyage athulema register wena eka nathara karanna
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
