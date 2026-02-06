@@ -10,3 +10,8 @@ server:
 list:
   -one:
   -two:
+
+# meka use karanne meyawama meyage athulema register wena eka nathara karanna
+eureka:
+  client:
+    allow-redirects: false
