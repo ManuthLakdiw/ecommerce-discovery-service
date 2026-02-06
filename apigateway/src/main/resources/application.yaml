@@ -7,17 +7,16 @@ spring:
         webflux:
           routes:
             - id: inventory-service
-              # Eureka ???? Service ?? ????????
-              uri: lb://inventory-service # mehema danna puluwan eureka server eke register karana ewa witharai . ehema register karala nethnm http://localhost:8082 wage dirrect denna puluwan.
+              uri: lb://inventoryservice
               predicates:
-                # ???? 'Path' ??????? ????? ??. '=' ????? ????? '?' ????? ????.
-                # ????? Controller ??? Path ??? ?????? ?????? ??? ????? ???.
-                - Path=/api/v1/inventory/**
+                - Path=/inventory-service/**
 
             - id: order-service
-              uri: lb://order-service
+              uri: lb://orderservice # app name or host (http:8082)
               predicates:
-                - Path=/api/v1/order/**
+                - Path=/order-service/**
+
+
 
 server:
   port: 8080
