@@ -1,3 +1,12 @@
 spring:
   application:
     name: discoveryservice
+
+
+server:
+  port: 8761
+
+# for list
+list:
+  -one:
+  -two:
